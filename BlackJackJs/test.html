@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="game">
+    <h1>Player cards : </h1>
+    <div id="player-hand"></div>
+
+    <h1>player hand value : </h1>
+    <div id="player-hand-value"></div>
+
+    <h1>Dealer hand : </h1>
+    <div id="dealer-hand"></div>
+
+    <h1>dealer hand value : </h1>
+    <div id="dealer-hand-value"></div>
+  </div>
+  <button onclick="hit();">Hit</button>
+  <button onclick="stand();">Stand</button>
+  <img id="img" src="" alt="">
+  <style>
+    img {
+      height: 500px;
+      width: 400px;
+    }
+  </style>
+  <script>
+    var cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
+    var names = ["c", "car", "t", "p"];
+    var playerHand;
+    var dealerHand;
+
+    function drawRandomCard(cards) {
+      var randomCard = cards[Math.floor(Math.random() * cards.length)];
+    }
+
+
+    function startGame() {
+      playerHand = [drawRandomCard(cards), drawRandomCard(cards)];
+      dealerHand = [drawRandomCard(cards), drawRandomCard(cards)];
+    }
+
+    function getHandVlaue(hand) {
+      var somme = 0;
+      for (var i = 0; i < hand.length; i++) {
+        somme += hand[i];
+      }
+      return somme;
+    }
+    startGame();
+
+    function hit() {
+      playerHand.push(drawRandomCard(cards));
+      console.log("new player hand: " + playerHand);
+      if (getHandVlaue(playerHand) > 21) {
+        document.getElementById("player-hand".innerHTML = playerHand)
+      }
+    }
+    document.getElementById("player-hand").innerHTML = playerHand;
+    document.getElementById("player-hand-value").innerHTML = getHandVlaue(playerHand);
+    document.getElementById("dealer-hand").innerHTML = dealerHand;
+    document.getElementById("dealer-hand-value").innerHTML = getHandVlaue(dealerHand);
+  </script>
+</body>
+
+</html>

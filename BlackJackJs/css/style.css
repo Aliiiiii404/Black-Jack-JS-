@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/background/test.jfif);
+    background-position: center;
+    background-size: cover;
+}
+body img{
+    user-select: none;
+}
+.pack{
+    height: 275px;
+    float: right;
+}
+h3{
+    color: white;
+    text-align: center;
+}
+#sommePlayer,
+#sommeComputer{
+    margin-right: 270px;
+    font-size: 35px;
+    border: 3px solid black;
+    width: 150px;
+    padding: 10px;
+    margin-left: 42%;
+    user-select: none;
+}
+
+.card-slot{
+    display: flex;
+    margin: 0 auto;
+    border: 5px solid white;
+    border-radius: 5%;
+    height: 250px;
+    width: 150px;
+    position: relative;
+}
+.card-slot img{
+    height: 250px;
+}
+.names{
+    display: flex;
+    justify-content: center;
+}
+.names img{
+    margin-right: 280px;
+    opacity: 50%;
+    height: 400px;
+    width: 550px;
+}
+.player {
+    margin-right: 280px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.up{
+    margin-bottom: 200px;
+}
+h4{
+    color: white;
+    margin-left: 170px;
+    font-size: 20px;
+    user-select: none;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.chips input{
+    font-size: 35px;
+}
+.buttons-game input,
+.buttons-start input{
+    font-size: 50px;
+}
+.chips input,
+.buttons-game input,
+.buttons-start input{
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+}
+.chips :nth-child(1){
+    background-color: white;
+    color: black;
+}
+.chips :nth-child(2){
+    background-color: rgb(195, 30, 30);
+    color: white;
+}
+.chips :nth-child(3){
+    background-color: rgb(123, 203, 235);
+    color: white;
+}
+.chips :nth-child(4){
+    background-color: rgb(35, 180, 35);
+    color: white;
+}
+.chips :nth-child(5){
+    background-color: gold;
+    color: black;
+}
+.chips :nth-child(6){
+    background-color: black;
+    color: white;
+}
+
+/* HOVER */
+.chips :nth-child(1):hover{
+    background-color: lightgray;
+    color: black;
+}
+.chips :nth-child(2):hover{
+    background-color: rgb(228, 74, 74);
+    color: white;
+}
+.chips :nth-child(3):hover{
+    background-color: rgb(21, 162, 175);
+    color: white;
+}
+.chips :nth-child(4):hover{
+    background-color: rgb(49, 97, 27);
+    color: white;
+}
+.chips :nth-child(5):hover{
+    background-color: rgb(235, 157, 13);
+    color: white;
+}
+.chips :nth-child(6):hover{
+    background-color: rgb(53, 53, 51);
+    color: white;
+}
+/*Bouton start*/
+.buttons-start{
+    display: none;
+}
+.buttons-start input{
+    background-color: rgb(13, 177, 226);
+    color: white;
+}
+.buttons-start input:hover{
+    background-color: rgb(6, 120, 155);
+    color: white;
+}
+/*bouton jouer*/
+.buttons-game{
+    display: none;
+}
+.buttons-game input{
+    background-color: rgb(11, 185, 162);
+    color: white;
+}
+.buttons-game input:hover{
+    background-color: rgb(4, 116, 101);
+    color: white;
+}
+/*FOOTER*/
+footer{
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    background-image: url(/img/background/bg.jpg);
+    user-select: none;
+}
+footer h5{
+    color: white;
+    text-align: left;
+    font-size: 35px;
+}
+footer h6{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*WINNER TEXT*/
+#winner{
+    font-size: 70px;
+    height: 140px;
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 25px 0 0 -400px;
+    z-index: 7;
+    display: none;
+}
+#winner:hover{
+    background-color: white;
+    color: black;
+}
+.winner{
+    position: relative;
+}
